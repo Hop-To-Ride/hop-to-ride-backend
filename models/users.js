@@ -49,39 +49,53 @@ const userSchema=new mongoose.Schema({
       trim:true,
     },
     // Optional
+    driverID:{
+      type:String,
+      trim:true,
+      default:"",
+    },
     driving_license_number:{
       type:String,
       trim:true,
+      default:"",
     },
     driving_license_photos:{
       type:String,
       trim:true,
+      default:"",
     },
     state:{
       type:String,
+      default:"",
     },
     city:{
       type:String,
+      default:"",
     },
     vehicle_number:{
       type:String,
       trim:true,
+      default:"",
     },
     vehicle_type:{
       type:String,
       trim:true,
+      default:"",
     },
     vehicle_model:{
       type:String,
       trim:true,
+      default:"",
     },
     vehicle_color:{
       type:String,
       trim:true,
+      default:"",
     },
     vehicle_photos:{
       type:String,
       trim:true,
+      default:"",
     },
 
     tokens:[{
