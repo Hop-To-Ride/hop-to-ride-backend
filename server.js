@@ -4,7 +4,7 @@ const mongoose = require("./db/db.js");
 
 app.use(express.json());
 
-const usersRouter = require("./routers/users.js");
+const usersRouter = require("./routers/authenticationRouter.js");
 app.use("/users", usersRouter);
 
 app.listen(3000, () => console.log("server started"));

@@ -126,14 +126,14 @@ userSchema.statics.findByCredentials = async (email, username, password) => {
     user = await User.findOne({ username: username });
   }
   if (user == undefined) {
-    throw new TassieCustomError("Invalid Email or Username!");
+    throw new Error();
     // throw new Error('Invalid Email or Username!')
   }
   const isMatch = await bcrypt.compare(password, user.password);
 
   if (!isMatch) {
     // throw new Error('Invalid Password!')
-    throw new TassieCustomError("Invalid Password!");
+    throw new Error();
   }
   return user;
 };
