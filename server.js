@@ -4,6 +4,7 @@ const mongoose = require("./db/db.js");
 
 app.use(express.json());
 
+
 const usersRouter = require("./routers/authenticationRouter.js");
 app.use("/users", usersRouter);
 

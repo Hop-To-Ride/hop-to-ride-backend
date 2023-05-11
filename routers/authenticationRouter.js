@@ -12,6 +12,6 @@ router.post("/registerAsDriver", authenticationController.registerAsDriver);
 
 router.post("/login", authenticationController.login);
 
-module.exports = {
-  router,
-};
+router.delete("/", authenticationController.deleteUsers);
+
+module.exports = router
